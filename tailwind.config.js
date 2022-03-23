@@ -9,6 +9,8 @@ module.exports = {
       "bg-offwhite": "#E5E5E5",
       "reallywhite": "#FFFFFF",
       "floralwhite": "#fef8f1",
+      "gray": "#656565",
+      "lightgray": "#CCCCCC",
       "cornflowerblue": "#4D96FF",
       "limegreen": "#6ECA7C",
       "sunyellow": "#FFD93D",

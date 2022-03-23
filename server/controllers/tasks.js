@@ -23,7 +23,8 @@ async function create(req, res) {
   try {
     await Task.create({
       task: req.body.task,
-      value: req.body.value,
+      date: req.body.date,
+      reward: req.body.reward,
       user: req.user._id,
     });
     // 2. send a response to frontend - newly created task, 
