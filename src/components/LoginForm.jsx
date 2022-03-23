@@ -7,10 +7,9 @@ export default function LoginForm ({setToken}) {
    
 
    const handleChange = (e) => {
-        // this.setState({
-        //     [e.target.name]: e.target.value,
-        //     error: ''
-        // })
+        if(e.target.name === 'email'){
+            setEmail(e.target.value);
+        }eles if (e.target.name === 'password')
     }
 
     const handleSubmit = async (e) => {
