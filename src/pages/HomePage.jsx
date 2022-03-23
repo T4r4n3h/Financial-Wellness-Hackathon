@@ -2,7 +2,8 @@ import React from 'react'
 
 const HomePage = () => {
   return (
-    <div className="home-page">HomePage
+    <div className="home-page">HomePagedoes this show?
+    
 
     </div>
   )

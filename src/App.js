@@ -1,48 +1,26 @@
-import {Component}from 'react';
-import {Route, Routes} from 'react-router-dom'
-import './App.css';
-import AuthPage from './pages/AuthPage'
+import {useState} from 'react'
+import LoginForm from './components/LoginForm'
 import HomePage from './pages/HomePage'
-import Task from './components/Task'
-import Test from './components/Test'
+
+export default function App() {
 
 
-export default class App extends Component {
-//   state = {user: ''}
-  
-//   logInUser = (user) => {this.setState({user: user})}
+  const[token, setToken] = useState();
+  if (!token) {
+    return <LoginForm setToken={setToken} />
+  }
 
-//   logOutUser = () => {this.setState({user: null})}
+return(
 
-//   componentDidMount() {
-//       let token = localStorage.getItem('token')
-//       if (token) {
-//           const payload = JSON.parse(atob(token.split('.')[1])); // decode token
-//           if (payload.exp < Date.now() / 1000) {  // Check if our token is expired, and remove if it is (standard/boilerplate)
-//               localStorage.removeItem('token');
-//               token = null;
-//           } else { // token not expired! our user is still 'logged in'. Put them into state.
-//               let userDoc = payload.user // grab user details from token
-//               this.setState({user: userDoc})      
-//           }
-//       }
-//   }
+  <div className="container">
 
-  render() {
-      return (
-        <div className="w-screen h-screen bg-floralwhite">
-          {/* <Test/> */}
-          <Task />
-        </div>
-      );
-    }
+      <HomePage/>
+
+
+
+    
+  </div>
+)
+
+
 }
-//           <div className="App text-gray-500 bg-gradient-to-t from-gray-50 to-white">
-//               {this.state.user
-//                   ?
-//                   <Routes><Route path='*' element={<HomePage user={this.state.user} logOutUser={this.logOutUser}/>}/></Routes>
-//                   :
-//                   <AuthPage logInUser={this.logInUser}/>
-//               }
-//               <div className="h-20"></div>
-//           </div>
