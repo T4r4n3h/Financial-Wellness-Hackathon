@@ -3,11 +3,15 @@ const Schema = mongoose.Schema;
 
 const taskSchema = new Schema(
   {
-    task: {
+    title: {
       type: String,
       required: true,
     },
-    value: {
+    date: {
+      type: Number,
+      required: true,
+    },
+    reward: {
       type: Number,
       required: true,
     },
