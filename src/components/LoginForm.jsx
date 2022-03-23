@@ -22,6 +22,7 @@ export default class LoginForm extends Component {
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email: this.state.email, password: this.state.password})
             })
+            console.log('')
 
             if (!fetchResponse.ok) throw new Error('Fetch failed - Bad request')
 
