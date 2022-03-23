@@ -4,6 +4,7 @@ import './App.css';
 import AuthPage from './pages/AuthPage'
 import HomePage from './pages/HomePage'
 import Task from './components/Task'
+import Pocket from './components/Pocket'
 import Test from './components/Test'
 
 
@@ -30,8 +31,9 @@ export default class App extends Component {
 
   render() {
       return (
-        <div className="w-screen h-screen bg-floralwhite">
+        <div className="container w-screen h-screen bg-floralwhite">
           {/* <Test/> */}
+          <Pocket />
           <Task />
         </div>
       );
