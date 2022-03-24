@@ -4,18 +4,17 @@ import food from '../assets/food.png'
 const Task = () => {
   return (
     <div>
-      <h1 className="text-xl">My Mission</h1>
-      <div className="container bg-reallywhite flex rounded-medium shadow">
-        <div className="">
-          <img src={food} alt="Food Icon" width="20" height="30"/>
+      <div className="w-80 h-20 container bg-reallywhite flex rounded-medium shadow relative">
+        <div className="my-auto">
+          <img className="ml-3 mr-4" src={food} alt="Food Icon" width="20" height="30"/>
         </div>
-        <div className="">
+        <div className="my-auto">
           <p className="text-sm">Help with grocery shopping</p>
-          <p className="text-xs text-gray">Today</p>
-          </div>
-        <div className="">
-          <p className="text-xs text-gray">$2.00</p>
-          </div>
+          <p className="text-xs text-gray pt-2">Today</p>
+        </div>
+        <div className="my-auto ml-4 absolute right-4 top-8">
+          <p className="mx-auto text-xs text-gray">$2.00</p>
+        </div>
       </div>
     </div>
   );

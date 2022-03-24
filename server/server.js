@@ -15,7 +15,7 @@ require("dotenv").config();
 require("./config/database.js");
 
 // api routes
-app.use('/api', require('./routes/api/tasks.js'));
+app.use('/api/tasks', require('./routes/api/tasks.js'));
 app.use('/api/users', require('./routes/api/users.js'))
 // app.use(require('./config/auth')) // any subsequent routes will have req.user
 

@@ -8,7 +8,7 @@ const taskSchema = new Schema(
       required: true,
     },
     date: {
-      type: Number,
+      type: Date,
       required: true,
     },
     reward: {
@@ -20,12 +20,6 @@ const taskSchema = new Schema(
       required: true,
       default: false
     },
-    user: { 
-      type: Schema.Types.ObjectId, ref: "User" },
   },
-  {
-    timestamps: true,
-  }
 );
-
 module.exports = mongoose.model("Task", taskSchema);

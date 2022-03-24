@@ -20,12 +20,13 @@ async function index(req, res) {
 }
 
 async function create(req, res) {
+  console.log("this is the create function")
   try {
     await Task.create({
-      task: req.body.task,
+      title: req.body.title,
       date: req.body.date,
       reward: req.body.reward,
-      user: req.user._id,
+      // user: req.user._id,
     });
     // 2. send a response to frontend - newly created task, 
     res.status(200).json("ok");
